@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width:100%;
+    user-select: none;
+    pointer-events: none;
+    
+}
+
+chao {
+    display:flex;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    overflow: hidden;
+    user-select: none;
+    pointer-events: none;
+    
+}
+
+.game-board {
+    width: 100%;
+    height: 520px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    pointer-events: none;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    background: black;
+    color: #E0F6FF;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+    text-align: end;
+    pointer-events: none;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s linear infinite;
+    pointer-events: none;
+}
+
+.koopa {
+    position: absolute;
+    margin-left: 100px;
+    bottom: 0;
+    width: 50px;
+    animation: koopa-animation 8s linear infinite;
+    pointer-events: none;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+    pointer-events: none;
+
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 7s linear infinite;
+    pointer-events: none;
+}
+
+.banner {
+    display: none;
+    position: relative;
+    margin: auto;
+    top: 35%;
+    width: 1000px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+@keyframes pipe-animation {
+    from {
+        right: 0;
+    }
+    
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes jump {
+    
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes koopa-animation {
+    from {
+        right: 0;
+    }
+    
+    to {
+        right: 100%;
+    }
+
+}
